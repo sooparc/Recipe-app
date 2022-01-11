@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="/stylesheets/register.css" />
+
+<% layout('layout/boilerplate')%>
+
+<div class="mt-5">
+  <div class="row">
+    <div class="col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+      <div class="card shadow">
+        <img
+          src="https://images.unsplash.com/photo-1438806146127-b8ad315ddc89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDQ4fHxwYW5jYWtlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+          alt=""
+          class="card-img-top"
+        />
+        <div class="card-body">
+          <h4 class="card-title text-center my-3">Register</h4>
+          <form action="/register" method="POST" class="validated-form">
+            <div class="mb-3">
+              <label class="form-label" for="username">Username</label>
+              <input
+                class="form-control"
+                type="text"
+                id="username"
+                name="username"
+                autofocus
+                required
+              />
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                required
+              />
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="password">Password</label>
+              <input
+                class="form-control"
+                type="password"
+                id="password"
+                name="password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+                required
+              />
+              <div class="password form-text">
+                <small>
+                  Password is at least 8 characters long and must contain 1
+                  uppercase character & 1 number (Cannot contain special
+                  characters).
+                </small>
+              </div>
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <div class="my-4 text-center">
+              <button type="submit" class="btn btn-success btn-block">
+                Join now
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

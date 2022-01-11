@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="/stylesheets/todayMeal.css" />
+<% layout('layout/boilerplate')%>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <% for (let recipe of recipes) {%>
+    <h2 class="text-center my-5">Today's meal recommendation</h2>
+    <div id="cards_landscape_wrap-2">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-6 offset-sm-3"
+          >
+            <div class="card-flyer shadow-lg">
+              <div class="text-box">
+                <div class="image-box">
+                  <img src="<%=recipe.image%>" class="card-img-top" alt="..." />
+                </div>
+                <div class="card-body text-container">
+                  <h5 class="card-title text-center my-2"><%=recipe.name%></h5>
+                  <div class="text-center my-3">
+                    <form
+                      action="/detail/<%=recipe.id%>"
+                      method="GET"
+                      style="display: inline-block"
+                    >
+                      <button type="submit" class="btn btn-outline-warning m-2">
+                        Get this recipe
+                      </button>
+                    </form>
+                    <form
+                      action="/todayMeal"
+                      method="POST"
+                      style="display: inline-block"
+                    >
+                      <button type="submit" class="btn btn-outline-secondary">
+                        Another recipe
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </body>
+</html>

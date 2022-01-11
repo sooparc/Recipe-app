@@ -1,0 +1,16 @@
+body {
+  background-image: url("../stylesheets/backgroundImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: "Merriweather", serif;
+}
+
+.container {
+  position: relative;
+  top: 35vh;
+  margin-bottom: 8%;
+  font-size: bold;
+}
