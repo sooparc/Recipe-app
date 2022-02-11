@@ -3,9 +3,9 @@
 First website i built using these technologies.
 
 1. EJS
-2. Node JS
-3. HTML
-4. CSS
+2. MONGO DB
+4. HTML
+5. CSS
 
 
 Find meals for your ingredients ! 
